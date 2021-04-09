@@ -9,7 +9,7 @@ export const Library = ({ recordings }) => {
                 <EmptyLibraryCard />
                 :
                 recordings.slice(0).reverse().map((cleanRecording, index) => {
-                    return <AudioCard cleanRecording={cleanRecording} count={recordings.length - index} />
+                    return <AudioCard key={index} cleanRecording={cleanRecording} count={recordings.length - index} />
                 })
             }
         </div>
