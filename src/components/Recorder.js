@@ -1,16 +1,7 @@
-import { Component, useState, useEffect, useRef } from 'react';
-import MicRecorder from 'mic-recorder-to-mp3';
-import { Library } from './Library';
-import axios from 'axios';
-import { Button, Radio, message } from 'antd';
-import { AudioOutlined, BorderOutlined, LoadingOutlined } from '@ant-design/icons';
-import { Row, Col, Space } from 'antd';
+import { useState, useEffect } from 'react';
+import { Row, Col } from 'antd';
 import { RecordingButton } from './RecordingButton';
-import socketIOClient from "socket.io-client";
-
-const Mp3Recorder = new MicRecorder({ bitRate: 128 });
-
-const API_URL = "https://api.audo.ai/v1";
+import { Library } from './Library';
 
 export const Recorder = () => {
     const [recordings, setRecordings] = useState([]);

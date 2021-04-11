@@ -1,4 +1,4 @@
-import { Row, Card} from 'antd';
+import { Row, Card } from 'antd';
 
 
 export const Library = ({ recordings }) => {
